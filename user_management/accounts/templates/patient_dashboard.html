@@ -1,0 +1,6 @@
+<h1>Patient Dashboard</h1>
+<p>First Name: {{ profile.user.first_name }}</p>
+<p>Last Name: {{ profile.user.last_name }}</p>
+<p>Email: {{ profile.user.email }}</p>
+<p>Address: {{ profile.address_line1 }}, {{ profile.city }}, {{ profile.state }} - {{ profile.pincode }}</p>
+<img src="{{ profile.profile_picture.url }}" alt="Profile Picture">
