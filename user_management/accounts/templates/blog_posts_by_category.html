@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts by Category</title>
+</head>
+<body>
+    {% for category, posts in category_dict.items %}
+        <h1>{{ category.name }}</h1>
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" width="100">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.summary|truncatewords:15 }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

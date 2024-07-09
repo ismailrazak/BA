@@ -1,0 +1,14 @@
+<h1>Patient Dashboard</h1>
+<h2> Appointment Booking System</h2>
+
+<body>
+{% for doctors in doctor_user %}
+<ul>
+    <li><img src="{{doctors.profile.profile_picture.url}}" width="200" height="200">
+        <p>Name:{{doctors.username}}</p>
+        <button value="Submit">
+
+    </li>
+</ul>
+{% endfor %}
+</body>

@@ -1,0 +1,12 @@
+
+  <h2>Doctors</h2>
+  <ul>
+    {% for doctor in doctors %}
+      <li>
+        <img src="{{ doctor.profile_picture.url }}" alt="{{ doctor.user.first_name }} {{ doctor.user.last_name }}">
+        <p>{{ doctor.user.first_name }} {{ doctor.user.last_name }}</p>
+        <a href="{% url 'accounts:book_appointment' doctor.id %}">Book Appointment</a>
+      </li>
+    {% endfor %}
+  </ul>
+

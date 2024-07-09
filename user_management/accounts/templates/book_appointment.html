@@ -1,0 +1,8 @@
+
+  <h2>Book Appointment with Dr. {{ doctor.user.first_name }} {{ doctor.user.last_name }}</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Confirm</button>
+  </form>
+

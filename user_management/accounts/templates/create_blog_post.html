@@ -1,0 +1,14 @@
+<h1>Create Blog Post</h1>
+{% if form.is_valid %}
+<p>Post has been submitted.</p>
+<a href="{%url 'accounts:blog_posts_by_category'  %}">return to blog_post></a>
+{% else %}
+
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+{%endif%}
+
